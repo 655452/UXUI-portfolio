@@ -1122,11 +1122,14 @@
                       if(event.target.nextElementSibling==null){
                         console.log(event.target.nextElementSibling)
                         document.getElementById("sliding-post").children[0].style.transform.transition="1s ease-in-out"
-                        document.getElementById("sliding-post").children[0].style.width="auto"
+                        document.getElementById("sliding-post").children[0].style.width="100%"
+                        document.getElementById("sliding-post").children[0].style.height="100%"
                       }
                       event.target.style.transform.transition="1s ease-in-out"
                       event.target.style.width="0px"
-                      event.target.nextElementSibling.style.width="auto"
+                      event.target.style.height="0px"
+                      event.target.nextElementSibling.style.width="100%"
+                      event.target.nextElementSibling.style.height="100%"
                       console.log(event.target.nextElementSibling)
                       
                 
