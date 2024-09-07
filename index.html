@@ -192,59 +192,58 @@
             <button class="navbar-link" data-nav-link>Contact</button>
           </li>
           <li class="navbar-item">
-            <button class="navbar-link"  id="theme-button" 
-                    style="background-color: transparent; border: none; font-size: 24px; cursor: pointer;    transform: rotate(-145deg);
+            <button class="navbar-link" id="theme-button" style="background-color: transparent; border: none; font-size: 24px; cursor: pointer;    transform: rotate(-145deg);
                     font-weight: 1000;
                     color: orange;">
-                    ☀ <!-- Sun icon for light mode -->
+              ☀ <!-- Sun icon for light mode -->
             </button>
           </li>
-          
+
           <script>
             const root = document.documentElement;
             // Define the icons for light and dark modes using HTML entities
             const lightIcon = '☀'; // Sun icon
             const darkIcon = '☾';  // Moon icon
-          
+
             // Toggle dark/light mode
             function toggleTheme() {
               const buttonX = document.getElementById('theme-button');
               console.log(buttonX.innerHTML === lightIcon)
               // Check innerHTML content directly as string literals
-    if (buttonX.innerHTML.trim() === '☀') { // Use string comparison
-       console.log( buttonX.innerHTML)
-       buttonX.style.color="white"
-       root.style.setProperty('--bg-gradient-onyx', 'linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%)');
-        root.style.setProperty('--bg-gradient-jet', 'hsl(240, 2%, 13%)');
-        root.style.setProperty('--onyx', 'hsl(240, 1%, 17%)');
-        root.style.setProperty('--eerie-black-1', 'hsl(240, 2%, 13%)');
-        root.style.setProperty('--eerie-black-2', 'hsl(240, 2%, 12%)');
-        root.style.setProperty('--smoky-black', 'hsl(0, 0%, 7%)');
-        root.style.setProperty('--white-1', 'hsl(0, 0%, 100%)');
-        root.style.setProperty('--white-2', 'hsl(0, 0%, 98%)');
-        root.style.setProperty('--light-gray', 'hsl(0, 0%, 84%)');
-        root.style.setProperty('--light-gray-70', 'hsla(0, 0%, 84%, 0.7)');
-      buttonX.innerHTML = '☾';
-    } else {
-      buttonX.innerHTML = "☀";
-      root.style.setProperty('--bg-gradient-onyx', 'whitesmoke');
-        root.style.setProperty('--bg-gradient-jet', 'whitesmoke');
-        root.style.setProperty('--onyx', 'whitesmoke');
-        root.style.setProperty('--eerie-black-1', 'whitesmoke');
-        root.style.setProperty('--eerie-black-2', 'whitesmoke');
-        root.style.setProperty('--smoky-black', 'whitesmoke');
-        root.style.setProperty('--white-1', 'black');
-        root.style.setProperty('--white-2', 'black');
-        root.style.setProperty('--light-gray', 'black');
-        root.style.setProperty('--light-gray-70', 'black');
-      buttonX.style.color="orange"
-    }
+              if (buttonX.innerHTML.trim() === '☀') { // Use string comparison
+                console.log(buttonX.innerHTML)
+                buttonX.style.color = "white"
+                root.style.setProperty('--bg-gradient-onyx', 'linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%)');
+                root.style.setProperty('--bg-gradient-jet', 'hsl(240, 2%, 13%)');
+                root.style.setProperty('--onyx', 'hsl(240, 1%, 17%)');
+                root.style.setProperty('--eerie-black-1', 'hsl(240, 2%, 13%)');
+                root.style.setProperty('--eerie-black-2', 'hsl(240, 2%, 12%)');
+                root.style.setProperty('--smoky-black', 'hsl(0, 0%, 7%)');
+                root.style.setProperty('--white-1', 'hsl(0, 0%, 100%)');
+                root.style.setProperty('--white-2', 'hsl(0, 0%, 98%)');
+                root.style.setProperty('--light-gray', 'hsl(0, 0%, 84%)');
+                root.style.setProperty('--light-gray-70', 'hsla(0, 0%, 84%, 0.7)');
+                buttonX.innerHTML = '☾';
+              } else {
+                buttonX.innerHTML = "☀";
+                root.style.setProperty('--bg-gradient-onyx', 'whitesmoke');
+                root.style.setProperty('--bg-gradient-jet', 'whitesmoke');
+                root.style.setProperty('--onyx', 'whitesmoke');
+                root.style.setProperty('--eerie-black-1', 'whitesmoke');
+                root.style.setProperty('--eerie-black-2', 'whitesmoke');
+                root.style.setProperty('--smoky-black', 'whitesmoke');
+                root.style.setProperty('--white-1', 'black');
+                root.style.setProperty('--white-2', 'black');
+                root.style.setProperty('--light-gray', 'black');
+                root.style.setProperty('--light-gray-70', 'black');
+                buttonX.style.color = "orange"
+              }
             }
-          
+
             // Add an event listener to toggle theme on click
             document.getElementById('theme-button').addEventListener('click', toggleTheme);
           </script>
-          
+
 
         </ul>
 
@@ -267,7 +266,7 @@
         <section class="about-text">
           <p>
             I'm Innovative Software Engineer from India, Maharastra, working in Software Engineering and .
-            I enjoy Problem Solving 
+            I enjoy Problem Solving
             turning complex problems into simple managable solution , innovative and Observational.
           </p>
 
@@ -276,7 +275,8 @@
             Moreover, I
             add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
             across your
-            message and identity in the most creative way. I created Robust Ecommerce Website Woich for many famous Client companies.
+            message and identity in the most creative way. I created Robust Ecommerce Website Woich for many famous
+            Client companies.
           </p>
         </section>
 
@@ -694,7 +694,7 @@
               <span>2020 — 2024</span>
 
               <p class="timeline-text">
-                   Fundamentals of Computer Engineering and Designing Collaborative working ,communication and Team work
+                Fundamentals of Computer Engineering and Designing Collaborative working ,communication and Team work
               </p>
 
             </li>
@@ -706,7 +706,8 @@
               <span>2018 — 2020</span>
 
               <p class="timeline-text">
-                I Learn Fundamentals of Sciences And How It  Works practical approaches how  physics chemistry maths around us  works
+                I Learn Fundamentals of Sciences And How It Works practical approaches how physics chemistry maths
+                around us works
               </p>
 
             </li>
@@ -718,7 +719,7 @@
               <span>2016 — 2018</span>
 
               <p class="timeline-text">
-                   Here I  Learned about basics of sciences and moral values cultural activities and sports
+                Here I Learned about basics of sciences and moral values cultural activities and sports
               </p>
 
             </li>
@@ -759,7 +760,7 @@
 
               <p class="timeline-text">
                 Developed QT based High end UI Application.
-                Offline Maps Rendering in Raster Format 
+                Offline Maps Rendering in Raster Format
                 Working on offline Maps rendering in Vector Format
                 For Defence purpose
               </p>
@@ -773,7 +774,7 @@
               <span>2022 — 2023</span>
 
               <p class="timeline-text">
-                Building Websites for College graduates and cilents on freelancing basis 
+                Building Websites for College graduates and cilents on freelancing basis
               </p>
 
             </li>
@@ -922,16 +923,16 @@
               <a href="#">
 
                 <a href="./Homepages/homeLiving.html">
-                <figure class="project-img">
+                  <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
                     </div>
                     <img src="./assets/images/myntra.png" alt="finance" loading="lazy">
                   </figure>
                 </a>
-                
+
                 <h3 class="project-title"><a href="./Homepages/homeLiving.html">Myntra Clone
-                </a></h3>
+                  </a></h3>
 
                 <p class="project-category">Web development</p>
 
@@ -1101,221 +1102,267 @@
         <header>
           <h2 class="h2 article-title">Blog</h2>
         </header>
-
+<style>
+  .blog-post-item{
+    height: 200px;
+    position: relative;
+  }
+  .blog-content{
+    z-index: 20;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .blog-content h3{
+    text-align: center;
+    width: 40%;
+    background-color: white;
+    /* background: linear-gradient(45deg, #0e9ee7, transparent); */
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  /* .blog-banner-box img {
+    position: absolute;
+  } */
+  #sliding-post{
+    position: absolute;
+  }
+</style>
         <section class="blog-posts">
 
           <ul class="blog-posts-list">
 
             <li class="blog-post-item">
               <!-- <a href="#"> -->
-                
 
-                <figure id="sliding-post" class="blog-banner-box" style="z-index: 100;">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                  <img style="width: 0px;"  src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                  <img  style="width: 0px;" src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-                <script>
-                  let SliderC=0;
-                  document.getElementById("sliding-post").addEventListener("click",(event)=>{
-                      
-                      if(event.target.nextElementSibling==null){
-                        console.log(event.target.nextElementSibling)
-                        document.getElementById("sliding-post").children[0].style.transform.transition="1s ease-in-out"
-                        document.getElementById("sliding-post").children[0].style.width="100%"
-                        document.getElementById("sliding-post").children[0].style.height="100%"
-                      }
-                      event.target.style.transform.transition="1s ease-in-out"
-                      event.target.style.width="0px"
-                      event.target.style.height="0px"
-                      event.target.nextElementSibling.style.width="100%"
-                      event.target.nextElementSibling.style.height="100%"
-                      console.log(event.target.nextElementSibling)
-                      
-                
-                  })
 
-                </script>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              <!-- </a> -->
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-<!-- demo
-  -->
-  <article class="demo" data-page="demo">
-    
-    <header>
-      <h2 class="h2 article-title">Demo</h2>
+              <figure id="sliding-post" class="blog-banner-box" >
+                <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                <img style="width: 0px;" src="./assets/images/blog-2.jpg" alt="Best fonts every designer"
+                  loading="lazy">
+                <img style="width: 0px;" src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                <img style="width: 0px;" src="./assets/images/blog-2.jpg" alt="Best fonts every designer"
+                  loading="lazy">
+                <img style="width: 0px;" src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                <img style="width: 0px;" src="./assets/images/blog-2.jpg" alt="Best fonts every designer"
+                  loading="lazy">
+                <img style="width: 0px;" src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+
+              
+              </figure>
+              <div id="blogC" class="blog-content">
+
+                <div class="blog-meta">
+                  <p class="blog-category">Festival Seasons</p>
       
-    </header>
-   <style>
-    /* styles.css */
-/* body {
+                  <span class="dot"></span>
+      
+                  <time datetime="2022-02-23">Fab 23, 2022</time>
+                </div>
+      
+                <h3 class="h3 blog-item-title">Celebrate It</h3>
+      
+                
+      
+              </div>
+    <script>
+      let SliderC = 0;
+      let slider=document.getElementById("sliding-post")
+      document.getElementById("blogC").addEventListener("click", (event) => {
+        console.log("Slider")
+        console.log(slider.children.length)
+      console.log(SliderC)
+      console.log("Nextelement")
+      console.log("Nextelement")
+      console.log(slider.nextElementSibling )
+        
+        if (slider.children.length-1 ===SliderC) {
+          console.log(event.target.nextElementSibling)
+          SliderC=0;
+          slider.children[0].style.transform.transition = "1s ease-in-out"
+          slider.children[0].style.width = "100%"
+          slider.children[0].style.height = "100%"
+
+        }
+        else{
+          slider.children[SliderC].style.transform.transition = "1s ease-in-out"
+        slider.children[SliderC].style.width = "0px"
+        slider.children[SliderC].style.height = "0px"
+        slider.children[SliderC].nextElementSibling.style.width = "100%"
+        slider.children[SliderC].nextElementSibling.style.height = "100%"
+        // console.log(event.target.nextElementSibling)
+        SliderC++;
+        }
+
+      })
+
+    </script>
+
+
+
+    <!-- </a> -->
+    </li>
+
+    <li class="blog-post-item">
+      <a href="#">
+
+        <figure class="blog-banner-box">
+          <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+        </figure>
+
+        <div class="blog-content">
+
+          <div class="blog-meta">
+            <p class="blog-category">Design</p>
+
+            <span class="dot"></span>
+
+            <time datetime="2022-02-23">Fab 23, 2022</time>
+          </div>
+
+          <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+          <p class="blog-text">
+            Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+          </p>
+
+        </div>
+
+      </a>
+    </li>
+
+    <li class="blog-post-item">
+      <a href="#">
+
+        <figure class="blog-banner-box">
+          <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+        </figure>
+
+        <div class="blog-content">
+
+          <div class="blog-meta">
+            <p class="blog-category">Design</p>
+
+            <span class="dot"></span>
+
+            <time datetime="2022-02-23">Fab 23, 2022</time>
+          </div>
+
+          <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+          <p class="blog-text">
+            Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+          </p>
+
+        </div>
+
+      </a>
+    </li>
+
+    <li class="blog-post-item">
+      <a href="#">
+
+        <figure class="blog-banner-box">
+          <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+        </figure>
+
+        <div class="blog-content">
+
+          <div class="blog-meta">
+            <p class="blog-category">Design</p>
+
+            <span class="dot"></span>
+
+            <time datetime="2022-02-23">Fab 23, 2022</time>
+          </div>
+
+          <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+          <p class="blog-text">
+            Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+          </p>
+
+        </div>
+
+      </a>
+    </li>
+
+    <li class="blog-post-item">
+      <a href="#">
+
+        <figure class="blog-banner-box">
+          <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+        </figure>
+
+        <div class="blog-content">
+
+          <div class="blog-meta">
+            <p class="blog-category">Design</p>
+
+            <span class="dot"></span>
+
+            <time datetime="2022-02-23">Fab 23, 2022</time>
+          </div>
+
+          <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+          <p class="blog-text">
+            Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+        </div>
+
+      </a>
+    </li>
+
+    <li class="blog-post-item">
+      <a href="#">
+
+        <figure class="blog-banner-box">
+          <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+        </figure>
+
+        <div class="blog-content">
+
+          <div class="blog-meta">
+            <p class="blog-category">Design</p>
+
+            <span class="dot"></span>
+
+            <time datetime="2022-02-23">Fab 23, 2022</time>
+          </div>
+
+          <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+          <p class="blog-text">
+            Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+          </p>
+
+        </div>
+
+      </a>
+    </li>
+
+    </ul>
+
+    </section>
+
+    </article>
+
+
+    <!-- demo
+  -->
+    <article class="demo" data-page="demo">
+
+      <header>
+        <h2 class="h2 article-title">Demo</h2>
+
+      </header>
+      <style>
+        /* styles.css */
+        /* body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -1325,174 +1372,174 @@
     background-color: #f0f0f0;
 } */
 
-.slider-card {
-    position: relative;
-    width: 200px;
-    max-width: 600px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+        .slider-card {
+          position: relative;
+          width: 200px;
+          max-width: 600px;
+          overflow: hidden;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
+        .slides {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+        }
 
-.slide {
-    min-width: 200px;
-    box-sizing: border-box;
-    transition: 1s ease-in-out;
-}
+        .slide {
+          min-width: 200px;
+          box-sizing: border-box;
+          transition: 1s ease-in-out;
+        }
 
-.slide img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    transition: 1s ease-in-out;
-}
+        .slide img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          display: block;
+          transition: 1s ease-in-out;
+        }
 
-.dots {
-    text-align: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-}
+        .dots {
+          text-align: center;
+          position: absolute;
+          bottom: 10px;
+          width: 100%;
+        }
 
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
+        .dot {
+          height: 10px;
+          width: 10px;
+          margin: 0 5px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          cursor: pointer;
+        }
 
-.activeS {
-    background-color: #211a1a;
-}
-.demo-wrap{
-  display: flex;
-}
+        .activeS {
+          background-color: #211a1a;
+        }
 
-   </style>
-  <div class="demo-wrap">
-    
-    <div class="slider-card">
-      <div class="slides">
-          <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_006.png" alt="Image 1"></div>
-          <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_005.png" alt="Image 2"></div>
-          <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_002.png" alt="Image 3"></div>
-          <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_006.png" alt="Image 1"></div>
-          <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_005.png" alt="Image 2"></div>
-          <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_002.png" alt="Image 3"></div>
+        .demo-wrap {
+          display: flex;
+        }
+      </style>
+      <div class="demo-wrap">
+
+        <div class="slider-card">
+          <div class="slides">
+            <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_006.png" alt="Image 1"></div>
+            <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_005.png" alt="Image 2"></div>
+            <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_002.png" alt="Image 3"></div>
+            <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_006.png" alt="Image 1"></div>
+            <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_005.png" alt="Image 2"></div>
+            <div class="slide"><img src="https://woich.in/frontend/main_banner/Image_002.png" alt="Image 3"></div>
+          </div>
+          <div class="dots"></div>
+        </div>
+
+
+
+
       </div>
-      <div class="dots"></div>
-  </div>
-  
 
-  
-    
-  </div>
-    
-<script>
-  // script.js
-let slideIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelector('.dots');
+      <script>
+        // script.js
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelector('.dots');
 
-function showSlides() {
-    slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(-${slideIndex * 100}%)`;
-        // slide.style.transi = '1s';
-    });
+        function showSlides() {
+          slides.forEach((slide, index) => {
+            slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+            // slide.style.transi = '1s';
+          });
 
-    const dotElements = document.querySelectorAll('.dot');
-    dotElements.forEach((dot, index) => {
-        dot.classList.toggle('activeS', index === slideIndex);
-    });
+          const dotElements = document.querySelectorAll('.dot');
+          dotElements.forEach((dot, index) => {
+            dot.classList.toggle('activeS', index === slideIndex);
+          });
 
-    slideIndex = (slideIndex + 1) % slides.length;
-}
+          slideIndex = (slideIndex + 1) % slides.length;
+        }
 
-function createDots() {
-    slides.forEach((_, index) => {
-        const dot = document.createElement('span');
-        dot.classList.add('dot');
-        dot.addEventListener('click', () => {
-            slideIndex = index;
-            showSlides();
+        function createDots() {
+          slides.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => {
+              slideIndex = index;
+              showSlides();
+            });
+            dots.appendChild(dot);
+          });
+        }
+
+        createDots();
+        showSlides();
+        setInterval(showSlides, 3000); // Auto-slide every 3 seconds
+
+        // Add event listener to pause auto-slide on user interaction
+        const sliderCard = document.querySelector('.slider-card');
+        sliderCard.addEventListener('mouseover', () => {
+          clearInterval(autoSlideInterval);
         });
-        dots.appendChild(dot);
-    });
-}
+        sliderCard.addEventListener('mouseout', () => {
+          autoSlideInterval = setInterval(showSlides, 3000);
+        });
 
-createDots();
-showSlides();
-setInterval(showSlides, 3000); // Auto-slide every 3 seconds
+        let autoSlideInterval = setInterval(showSlides, 3000);
 
-// Add event listener to pause auto-slide on user interaction
-const sliderCard = document.querySelector('.slider-card');
-sliderCard.addEventListener('mouseover', () => {
-    clearInterval(autoSlideInterval);
-});
-sliderCard.addEventListener('mouseout', () => {
-    autoSlideInterval = setInterval(showSlides, 3000);
-});
+      </script>
 
-let autoSlideInterval = setInterval(showSlides, 3000);
-
-</script>
-  
-</article>
+    </article>
 
 
 
 
-      <!--
+    <!--
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+    <article class="contact" data-page="contact">
 
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
+      <header>
+        <h2 class="h2 article-title">Contact</h2>
+      </header>
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
+      <section class="mapbox" data-mapbox>
+        <figure>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+            width="400" height="300" loading="lazy"></iframe>
+        </figure>
+      </section>
 
-        <section class="contact-form">
+      <section class="contact-form">
 
-          <h3 class="h3 form-title">Contact Form</h3>
+        <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+        <form action="#" class="form" data-form>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+          <div class="input-wrapper">
+            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
+            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+          </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+          <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+          <button class="form-btn" type="submit" disabled data-form-btn>
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Send Message</span>
+          </button>
 
-          </form>
+        </form>
 
-        </section>
+      </section>
 
-      </article>
+    </article>
 
     </div>
 
