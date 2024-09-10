@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UX/UI Personal Portfolio</title>
 
+  <!-- sweet alert library -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!--
     - favicon
   -->
@@ -1120,11 +1124,15 @@
     /* background: linear-gradient(45deg, #0e9ee7, transparent); */
     border-radius: 20px;
     font-weight: 500;
+    font-size: large;
   }
   /* .blog-banner-box img {
     position: absolute;
   } */
   #sliding-post{
+    position: absolute;
+  }
+  #Quiz-post{
     position: absolute;
   }
 </style>
@@ -1206,6 +1214,267 @@
 
     <!-- </a> -->
     </li>
+
+    <!-- Quiz  Blog  Post  -->
+   <!-- Font Awesome CDN for the timer icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<li class="blog-post-item" style="height: 400px;">
+  <figure id="Quiz-post" class="quiz-banner-box" style="background: linear-gradient(135deg, #5398c2 0%, #fd85d0 100%);padding: 20px; border-radius: 10px;">
+    <!-- Timer at the top left corner -->
+    <div id="timer" style="position: absolute; top: 20px; left: 20px; color: #fff; font-size: 1.2rem; background: linear-gradient(45deg, #1629cf, transparent); width: 100px; height: 100px; border-radius: 50%; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <i class="fas fa-stopwatch" style="font-size: 1.5rem; margin-bottom: 10px;"></i>
+      Time: <span id="time">60</span>
+    </div>
+
+    <!-- Quiz question box -->
+    <div id="question-box" style="font-size: 1.5rem; color: #fff; text-align: center;">
+      What is the capital of France?
+    </div>
+
+    <!-- Quiz options -->
+    <div id="options-box" style="margin-top: 20px; display: flex; flex-direction: column; align-items: center;">
+      <button class="option" style="padding: 10px 20px; margin: 5px; background-color: #fff; border-radius: 25px; cursor: pointer;">A) Paris</button>
+      <button class="option" style="padding: 10px 20px; margin: 5px; background-color: #fff; border-radius: 25px; cursor: pointer;">B) London</button>
+      <button class="option" style="padding: 10px 20px; margin: 5px; background-color: #fff; border-radius: 25px; cursor: pointer;">C) Berlin</button>
+      <button class="option" style="padding: 10px 20px; margin: 5px; background-color: #fff; border-radius: 25px; cursor: pointer;">D) Madrid</button>
+    </div>
+
+    <!-- Flash message (hidden initially) -->
+    <div id="flash-message" style="display: none; margin-top: 20px; padding: 10px; background-color: #00c851; color: #fff; border-radius: 5px; text-align: center;"></div>
+
+    <!-- Pagination Dots -->
+    <div id="pagination" style="display: flex; justify-content: center; margin-top: 20px; flex-wrap: wrap;">
+      <!-- Pagination dots will be injected here -->
+    </div>
+  </figure>
+
+  <div id="QuizC" class="quiz-content">
+    <h3 class="h3 quiz-item-title" style="text-align: center;">Quiz Time!</h3>
+  </div>
+
+  <script>
+    let QuizC = 0;
+    let timeLeft = 60; // Total time for the quiz in seconds
+    let questions = [
+  {
+    question: "What is the capital of France?",
+    options: ["Paris", "London", "Berlin", "Madrid"],
+    correct: 0 // Index of the correct answer
+  },
+  {
+    question: "What is the capital of Italy?",
+    options: ["Rome", "Milan", "Naples", "Venice"],
+    correct: 0
+  },
+  {
+    question: "What is the capital of Spain?",
+    options: ["Madrid", "Barcelona", "Valencia", "Seville"],
+    correct: 0
+  },
+  // JavaScript coding questions start here
+  {
+    question: "Which of the following is a JavaScript data type?",
+    options: ["String", "Number", "Boolean", "All of the above"],
+    correct: 3
+  },
+  {
+    question: "Which method is used to add an element to the end of an array in JavaScript?",
+    options: ["push()", "pop()", "shift()", "unshift()"],
+    correct: 0
+  },
+  {
+    question: "How do you create a function in JavaScript?",
+    options: ["function myFunction()", "def myFunction()", "func myFunction()", "create myFunction()"],
+    correct: 0
+  },
+  {
+    question: "How do you call a function named 'myFunction' in JavaScript?",
+    options: ["myFunction()", "call myFunction()", "run myFunction()", "execute myFunction()"],
+    correct: 0
+  },
+  {
+    question: "How can you add a comment in JavaScript?",
+    options: ["// This is a comment", "/* This is a comment */", "<!-- This is a comment -->", "Both A and B"],
+    correct: 3
+  },
+  {
+    question: "Which company developed JavaScript?",
+    options: ["Mozilla", "Netscape", "Google", "Microsoft"],
+    correct: 1
+  },
+  {
+    question: "What is the correct way to write an 'if' statement in JavaScript?",
+    options: ["if (i == 5)", "if i = 5 then", "if i == 5", "if i = 5"],
+    correct: 0
+  },
+  {
+    question: "Which event occurs when the user clicks on an HTML element?",
+    options: ["onmouseclick", "onmouseover", "onclick", "onchange"],
+    correct: 2
+  },
+  {
+    question: "How do you declare a JavaScript variable?",
+    options: ["let x", "var x", "Both A and B", "None of the above"],
+    correct: 2
+  },
+  {
+    question: "How do you write 'Hello World' in an alert box?",
+    options: ["msg('Hello World')", "alertBox('Hello World')", "alert('Hello World')", "msgBox('Hello World')"],
+    correct: 2
+  },
+  {
+    question: "What is the correct syntax for referring to an external script called 'app.js'?",
+    options: ["<script src='app.js'>", "<script href='app.js'>", "<script ref='app.js'>", "<script name='app.js'>"],
+    correct: 0
+  },
+  {
+    question: "What does 'NaN' mean in JavaScript?",
+    options: ["Not a Number", "Null as Number", "New Array Number", "No as Number"],
+    correct: 0
+  },
+  {
+    question: "What is 'this' keyword in JavaScript?",
+    options: ["It refers to the current object", "It refers to the previous object", "It refers to the global object", "It refers to the next object"],
+    correct: 0
+  },
+  {
+    question: "How do you create an array in JavaScript?",
+    options: ["var arr = []", "var arr = {}", "var arr = ()", "var arr = <>"],
+    correct: 0
+  },
+  {
+    question: "Which of the following methods can be used to remove the last element of an array?",
+    options: ["pop()", "push()", "shift()", "unshift()"],
+    correct: 0
+  },
+  {
+    question: "Which of the following is not a JavaScript framework?",
+    options: ["React", "Angular", "Vue", "Python"],
+    correct: 3
+  },
+  {
+    question: "How do you stop an interval timer in JavaScript?",
+    options: ["clearInterval()", "stopInterval()", "clearTimer()", "stopTimer()"],
+    correct: 0
+  },
+  {
+    question: "Which function converts JSON data to a JavaScript object?",
+    options: ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "JSON.object()"],
+    correct: 0
+  },
+  {
+    question: "What is the output of 'typeof NaN'?",
+    options: ["Number", "Object", "String", "Undefined"],
+    correct: 0
+  },
+  {
+    question: "Which JavaScript method is used to find the largest number in an array?",
+    options: ["Math.max()", "Math.min()", "Math.floor()", "Math.ceil()"],
+    correct: 0
+  }
+];
+
+
+    let totalQuestions = questions.length;
+    let timerDisplay = document.getElementById("time");
+    let flashMessage = document.getElementById("flash-message");
+    let pagination = document.getElementById("pagination");
+    
+  function initPagination() {
+    for (let i = 0; i < totalQuestions; i++) {
+      const dot = document.createElement('div');
+      dot.style.width = '10px';
+      dot.style.height = '10px';
+      dot.style.backgroundColor = i === 0 ? '#fff' : '#ccc';
+      dot.style.borderRadius = '50%';
+      dot.style.margin = '0 5px';
+      dot.classList.add('dot');
+      pagination.appendChild(dot);
+    }
+  }
+
+  function updatePagination() {
+    let dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+      dot.style.backgroundColor = index === QuizC ? '#fff' : '#ccc';
+    });
+  }
+
+  // SweetAlert2 Flash Message
+  function showFlashMessage(message, type) {
+    Swal.fire({
+      title: message,
+      icon: type === 'success' ? 'success' : 'error',
+      showConfirmButton: false,
+      timer: 2000,
+      toast: true,
+      position: 'top-right',
+      background: type === 'success' ? '#00c851' : '#ff3547',
+      customClass: {
+        popup: 'animated fadeInDown'
+      }
+    });
+  }
+
+  function loadQuestion() {
+    let questionBox = document.getElementById("question-box");
+    let optionsBox = document.getElementById("options-box");
+    let currentQuestion = questions[QuizC];
+    
+    questionBox.textContent = currentQuestion.question;
+    optionsBox.querySelectorAll('.option').forEach((button, index) => {
+      button.textContent = `${String.fromCharCode(65 + index)}) ${currentQuestion.options[index]}`;
+    });
+
+    updatePagination();
+  }
+
+  function moveToNextQuestion() {
+    QuizC++;
+    if (QuizC < totalQuestions) {
+      loadQuestion();
+    } else {
+      clearInterval(timer);
+      if (timeLeft > 0) {
+        showFlashMessage("🎉 Quiz completed! You passed! 🎉", 'success');
+      } else {
+        showFlashMessage("Time's up! You failed!", 'error');
+      }
+    }
+  }
+
+  function checkAnswer(selectedIndex) {
+    if (selectedIndex === questions[QuizC].correct) {
+      showFlashMessage("Correct Answer!", 'success');
+    } else {
+      showFlashMessage("Wrong Answer!", 'error');
+    }
+    moveToNextQuestion();
+  }
+
+  document.querySelectorAll('.option').forEach((button, index) => {
+    button.addEventListener('click', () => checkAnswer(index));
+  });
+
+  let timer = setInterval(() => {
+    if (timeLeft > 0) {
+      timeLeft--;
+      timerDisplay.textContent = timeLeft;
+    } else {
+      clearInterval(timer);
+      showFlashMessage("Time's up! You failed!", 'error');
+    }
+  }, 1000);
+
+  // Initial load
+  loadQuestion();
+  initPagination();
+  </script>
+</li>
+
+    
+  
 <!-- 
     <li class="blog-post-item">
       <a href="#">
